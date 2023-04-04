@@ -30,7 +30,9 @@ const SearchResult = ({ SearchQuery, setResultBox }) => {
   if (!data) return <Spinner />;
 
   const filteredResults = data?.filter((content) => {
+    // eslint-disable-next-line eqeqeq
     if (content.media_type == "tv") {
+      // eslint-disable-next-line array-callback-return
       return;
     } else {
       return content.title || content.name;
